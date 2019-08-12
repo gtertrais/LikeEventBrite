@@ -1,0 +1,13 @@
+Hi <%= @user.first_name %> you have subscribed to <%=@event.title%> event.
+==========================================================
+ 
+   Title: <%=@event.title%> 
+   Description: <%=@event.description%>
+   Price: <%=@event.price%>€
+   Start Date: <%=@event.start_date%>
+   Duration: <%=@event.duration%>
+   Created by: <%=@event.user.first_name%> <%=@event.user.last_name%>
+ 
+Access to the event with the link: <%= @url %>.
+ 
+See you soon!

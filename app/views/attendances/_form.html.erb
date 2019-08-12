@@ -1,10 +1,10 @@
-<%= form_with(model: participation, local: true) do |form| %>
-  <% if participation.errors.any? %>
+<%= form_with(model: attendance, local: true) do |form| %>
+  <% if attendance.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(participation.errors.count, "error") %> prohibited this participation from being saved:</h2>
+      <h2><%= pluralize(attendance.errors.count, "error") %> prohibited this attendance from being saved:</h2>
 
       <ul>
-      <% participation.errors.full_messages.each do |message| %>
+      <% attendance.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

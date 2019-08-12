@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.first_name %> you have subscribed to <%=@event.title%> event.</h1>
+    <p>
+
+     Event: <%=@event.title%><br>
+     Description:  <%=@event.description%><br>
+     Price:  <%=@event.price%>€ <br>
+     Start Date:  <%=@event.start_date%> <br>
+     Duration:  <%=@event.duration%> min <br>
+     Created by: <%=@event.user.first_name%> <%=@event.user.last_name%> <br>
+    </p>
+    <p>
+      Access to the event with the link: <%= @url %>
+    </p>
+    <p> See you soon!
+  </body>
+</html>

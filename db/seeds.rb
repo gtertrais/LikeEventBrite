@@ -2,7 +2,7 @@ require 'faker'
 
 User.destroy_all
 Event.destroy_all
-Participation.destroy_all
+Attendance.destroy_all
 
 
 10.times do
@@ -18,13 +18,13 @@ Participation.destroy_all
 
  #assign gossips to user
   
-  participation1 = Participation.create(stripe_customer_id: Faker::IDNumber.brazilian_citizen_number, user_id: user.id, event_id: Event.first.id)
-  participation2 = Participation.create(stripe_customer_id: Faker::IDNumber.brazilian_citizen_number, user_id: user.id, event_id: Event.last.id)
+  attendance1 = Attendance.create(stripe_customer_id: Faker::IDNumber.brazilian_citizen_number, user_id: user.id, event_id: Event.first.id)
+  attendance2 = Attendance.create(stripe_customer_id: Faker::IDNumber.brazilian_citizen_number, user_id: user.id, event_id: Event.last.id)
   
 
 
 end
 puts "10 users created"
 puts "10 events created"
-puts "20 participations created"
+puts "20 attendances created"
 puts "All values has been created!"

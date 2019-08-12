@@ -1,8 +1,8 @@
 class Event < ApplicationRecord
 
   belongs_to :user
-  has_many :participations
-  has_many :users, through: :participations
+  has_many :attendances
+  has_many :users, through: :attendances
 
   validates :start_date, :duration, :title, :description, :price, :location, presence: true
 
