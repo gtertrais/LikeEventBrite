@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   include EventsHelper
   
+  before_action :authenticate_user!, only: [:edit,:create,:destroy, :new]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
@@ -12,6 +13,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @end_date = @event.start_date + (@event.duration * 60)
   end
 
   # GET /events/new

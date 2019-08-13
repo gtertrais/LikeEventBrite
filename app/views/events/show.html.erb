@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>End date:</strong>
+  <%= @end_date %>
+</p>
+
+<p>
   <strong>Duration:</strong>
   <%= @event.duration %> min
 </p>
@@ -45,6 +50,7 @@
     <strong>Attendance:</strong>
     <%= @event.attendances.count %>
 </p>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
