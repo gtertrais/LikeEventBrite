@@ -1,4 +1,4 @@
-# Project EventBrite
+# Project LikeEventBrite
 
 ```Realised by Gaspard and Adrien```
 
