@@ -7,12 +7,12 @@
 
 <p>
   <strong>Duration:</strong>
-  <%= @event.duration %>
+  <%= @event.duration %> min
 </p>
 
 <p>
   <strong>Title:</strong>
-  <%= @event.title %>
+  <%= @event.title.upcase %>
 </p>
 
 <p>
@@ -22,12 +22,28 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @event.price %>
+  <%= @event.price %>€
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @event.location %>
+  <%= @event.location.capitalize %>
+</p>
+
+<p>
+    <strong>Organizer name:</strong>
+    <%= organizer.first_name %>
+    <%= organizer.last_name %>
+</p>
+
+<p>
+    <strong>Organizer:</strong>
+    <%= organizer.email %>
+</p>
+
+<p>
+    <strong>Attendance:</strong>
+    <%= @event.attendances.count %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
