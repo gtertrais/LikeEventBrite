@@ -1,24 +1,8 @@
-# README
+# Project EventBrite
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```Realised by Gaspard and Adrien```
 
-Things you may want to cover:
+**Heroku Server**
 
-* Ruby version
+https://event-brite-caen.herokuapp.com/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
