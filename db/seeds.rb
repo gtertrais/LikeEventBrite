@@ -14,7 +14,7 @@ Attendance.destroy_all
 
 
   #create gossip
-  event = Event.create(title: Faker::Game.title, description: Faker::Lorem.sentence(word_count: 120, supplemental: true),price: Faker::Number.between(from: 1, to: 1000), user_id: User.last.id, location: city, start_date: Faker::Date.forward(days: 23), duration: Faker::Number.between(from: 1, to: 120))
+  event = Event.create(title: Faker::Game.title, description: Faker::Lorem.sentence(word_count: 120, supplemental: true),price: Faker::Number.between(from: 1, to: 1000), user_id: User.last.id, location: city, start_date: Faker::Date.forward(days: 23), duration: 10)
 
  #assign gossips to user
   
@@ -24,7 +24,4 @@ Attendance.destroy_all
 
 
 end
-puts "10 users created"
-puts "10 events created"
-puts "20 attendances created"
-puts "All values has been created!"
+puts "2 users created"
