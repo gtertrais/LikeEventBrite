@@ -4,5 +4,4 @@
 
 **Heroku Server**
 
-https://event-brite-caen.herokuapp.com/
-
+https://event-brite-team-caen.herokuapp.com/
