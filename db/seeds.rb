@@ -5,7 +5,7 @@ Event.destroy_all
 Attendance.destroy_all
 
 
-10.times do
+2.times do
   #create user
   city = ["Angers", "Paris", "Marseilles", "Noirmoutier"].sample
   user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.sentence(word_count: 10, supplemental: true), email: "#{Faker::Name.first_name}@yopmail.com", encrypted_password: 'password')
