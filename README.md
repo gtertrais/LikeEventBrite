@@ -1,7 +1,7 @@
 # Project LikeEventBrite
 
-```Realised by Gaspard and Adrien```
+```Realised by Gaspard```
 
 **Heroku Server**
 
-https://event-brite-team-caen.herokuapp.com/
+https://like-event-brite-gaspard.herokuapp.com/
