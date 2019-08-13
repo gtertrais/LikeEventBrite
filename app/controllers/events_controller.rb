@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
+  include EventsHelper
+
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+
 
   # GET /events
   # GET /events.json
@@ -24,7 +27,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.new(event_params)
 
     respond_to do |format|
       if @event.save
