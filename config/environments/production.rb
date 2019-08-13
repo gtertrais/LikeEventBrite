@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { :host => 'EventBrite-Caen.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'event-brite-caen.herokuapp.com' }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
