@@ -7,12 +7,50 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
   <body>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" >
+          <a class="navbar-brand" href="/events">EventBrite</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto" >
+              <li class="nav-item active">
+                <a class="nav-link" href="/events">Home <span class="sr-only">(current)</span></a>
+              </li>
+              </ul>
+              <ul class= "nav navbar-nav navbar-right">
+              <% if current_user == nil %>
+              <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+              <a class="dropdown-item" href="/users/sign_up">Sign up</a>
+              <a class="dropdown-item" href="/users/sign_in">Log in</a>
+            </div>
+          </div>
+              <% end %>
+          
+              <% if current_user %>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/edit">Profile</a>
+              </li>
+                    <%= link_to "Log out", destroy_user_session_path,
+                    :class => "nav-link", method: :delete %>
+                    <% end %>
+          </div>
+      </nav>
+
     <%= yield %>
-  </body>
+</body>
 </html>
