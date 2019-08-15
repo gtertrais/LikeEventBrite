@@ -1,5 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+
+<% unless @event.users .include? current_user %> 
+<%= form_tag event_subscription_path(@event)  do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span>Amount: <%=@event.price%>€ </span>
+    </label>
+  </article>
+    <% end %> 
+     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="<%=@amount%>"
+          data-currency="eur"
+          data-locale="auto"></script>
+<% end %>
+
 <p>
   <strong>Start date:</strong>
   <%= @event.start_date %>
@@ -48,12 +70,11 @@
 
 <p>
     <strong>Attendance:</strong>
-    <%= @event.attendances.count %>
+    <%= @event.users.count %>
 </p>
-
-   <% if current_user && current_user.id == @event.user_id %> 
-    <%= link_to 'Edit', edit_event_path(@event) %> |
-    <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %> |
-    <% end %> 
-    <%= link_to 'Back', events_path %>
+ <% if current_user == @event.user %> 
+      <%= link_to 'Participant list', event_attendances_path(@event) %>  
+      <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %> 
+    <%= link_to 'Back', events_path(@event) %>
    

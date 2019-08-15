@@ -10,7 +10,7 @@ class Event < ApplicationRecord
   validates :duration, numericality: { greater_than: 0 }
   validates :title, length: { in: 5..140 }
   validates :description, length: { in: 20..1000 }
-  validates :price, :inclusion => 1..1000
+  validates :price, :inclusion => 0..1000
     
   def multiple_of_5?
     errors.add(:duration, "need to be a multiple of 5") if
@@ -21,6 +21,11 @@ class Event < ApplicationRecord
   def start_date_cannot_be_in_the_past
     errors.add(:start_date, "can't be in the past") if
       start_date < Time.now
+  end
+
+
+  def is_free?
+    return self.price == 0
   end
 
 end

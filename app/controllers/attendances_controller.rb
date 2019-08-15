@@ -1,10 +1,11 @@
 class AttendancesController < ApplicationController
-  before_action :set_attendance, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_event
+  before_action :is_admin?
   # GET /attendances
   # GET /attendances.json
   def index
     @attendances = Attendance.all
+    
   end
 
   # GET /attendances/1
@@ -61,14 +62,20 @@ class AttendancesController < ApplicationController
     end
   end
 
-  private
+
+    private
     # Use callbacks to share common setup or constraints between actions.
-    def set_attendance
-      @attendance = Attendance.find(params[:id])
+    def set_event
+      @event = Event.find(params[:event_id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def attendance_params
-      params.require(:attendance).permit(:stripe_customer_id)
+    def is_admin?
+      redirect_to root_path unless current_user == @event.user
+  end
+
+    def redirect_to_root
+      redirect_to events_path
     end
+
+
 end

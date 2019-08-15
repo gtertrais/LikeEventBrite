@@ -1,8 +1,7 @@
 class EventsController < ApplicationController
   include EventsHelper
-  
-  before_action :authenticate_user!, only: [:edit,:create,:destroy, :new]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :is_admin?, only: [:edit, :update, :destroy]
 
   # GET /events
   # GET /events.json
@@ -15,6 +14,49 @@ class EventsController < ApplicationController
   def show
     @end_date = @event.start_date + (@event.duration * 60)
   end
+
+def subscribe
+
+  @event = Event.find(params[:id])
+  if @event.users .include? current_user
+    flash[:error] = 'You already subscribed to this event'
+    redirect_to @event
+    return
+  end
+
+  @amount = (@event.price)*100
+
+  if !@event.is_free?
+  customer = Stripe::Customer.create({
+    email: params[:stripeEmail],
+    source: params[:stripeToken],
+  })
+
+  charge = Stripe::Charge.create({
+    customer: customer.id,
+    amount: @amount,
+    description: 'Rails Stripe customer',
+    currency: 'eur',
+  })
+  stripe_customer_id = charge.customer
+else
+  stripe_customer_id = ""
+end
+
+@event.users << current_user
+  flash[:success] = 'Subscribtion successfull'
+    redirect_to @event
+
+    
+
+rescue Stripe::CardError => e
+  flash[:error] = e.message
+  redirect_to @event
+
+  
+
+end
+
 
   # GET /events/new
   def new
@@ -71,6 +113,11 @@ class EventsController < ApplicationController
     def set_event
       @event = Event.find(params[:id])
     end
+
+      def is_admin?
+        redirect_to root_path unless current_user == @event.user
+    end
+  
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
