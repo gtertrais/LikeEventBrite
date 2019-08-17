@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<% unless @event.users .include? current_user %> 
+<% unless current_user == @event.user || !current_user %> 
 <%= form_tag event_subscription_path(@event)  do %>
   <article>
     <% if flash[:error].present? %>

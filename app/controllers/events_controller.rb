@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   include EventsHelper
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy, :subscribe]
   before_action :is_admin?, only: [:edit, :update, :destroy]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
@@ -18,9 +18,8 @@ class EventsController < ApplicationController
   end
 
 def subscribe
-
   @event = Event.find(params[:id])
-  if @event.users .include? current_user
+  if @event.users .include? current_user 
     flash[:error] = 'You already subscribed to this event'
     redirect_to @event
     return
@@ -41,21 +40,16 @@ def subscribe
     currency: 'eur',
   })
   stripe_customer_id = charge.customer
+  @event.users << current_user
+  flash[:success] = 'Subscribtion successfull'
+    redirect_to @event
 else
   stripe_customer_id = ""
 end
 
-@event.users << current_user
-  flash[:success] = 'Subscribtion successfull'
-    redirect_to @event
-
-    
-
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to @event
-
-  
 
 end
 
@@ -120,6 +114,7 @@ end
     end
 
       def is_admin?
+        @event = Event.find(params[:id])
         redirect_to root_path unless current_user == @event.user
     end
   
