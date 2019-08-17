@@ -1,0 +1,36 @@
+<br>
+<section class="card-events">
+  <h2>My infos</h2>
+  <div class="row">
+    <div class="col">
+
+
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @user.description %>
+    </p>
+
+    <p>
+      <strong>First Name:</strong>
+      <%= @user.first_name %>
+    </p>
+
+    <p>
+      <strong>Last Name:</strong>
+      <%= @user.last_name %>
+    </p>
+
+    <%= link_to 'Edit', edit_user_registration_path(@user) %> |
+    <%= link_to "Back", events_path %>
+
+  </div>
+  </div>
+</section>
+<br>
+
+
