@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :avatars, only: [:create]
     end
     resources :events do
+    resources :photos, only: [:create]
   	resources :attendances
     end
     post "events/subscribe/:id", to: "events#subscribe", as: "event_subscription"

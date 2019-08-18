@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+
+ <% @event.photos.each do |photo| %>
+    <%= image_tag(photo, :size => "260x180") %>
+<% end %>
+
 <% if @event.is_payable? %>
 <% unless current_user == @event.user || !current_user %> 
 <%= form_tag event_subscription_path do %>
