@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 
 def subscribe
   @event = Event.find(params[:id])
-  if @event.users .include? current_user 
+  if @event.users.include? current_user 
     flash[:error] = 'You already subscribed to this event'
     redirect_to @event
     return
@@ -43,6 +43,7 @@ def subscribe
   @event.users << current_user
   flash[:success] = 'Subscribtion successfull'
     redirect_to @event
+    return
 else
   stripe_customer_id = ""
 end
@@ -50,7 +51,7 @@ end
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to @event
-
+  return
 end
 
 
