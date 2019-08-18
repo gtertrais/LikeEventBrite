@@ -27,7 +27,7 @@ def subscribe
 
   @amount = (@event.price)*100
 
-  if !@event.is_free?
+  if @event.is_payable?
   customer = Stripe::Customer.create({
     email: params[:stripeEmail],
     source: params[:stripeToken],
@@ -41,11 +41,15 @@ def subscribe
   })
   stripe_customer_id = charge.customer
   @event.users << current_user
-  flash[:success] = 'Subscribtion successfull'
+  flash[:success] = 'Subscribtion successful'
     redirect_to @event
     return
 else
   stripe_customer_id = ""
+  @event.users << current_user
+  flash[:success] = 'Subscribtion successful'
+  redirect_to @event
+  return
 end
 
 rescue Stripe::CardError => e

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
+<% if @event.is_payable? %>
 <% unless current_user == @event.user || !current_user %> 
 <%= form_tag event_subscription_path do %>
   <article>
@@ -21,6 +21,12 @@
           data-currency="eur"
           data-locale="auto"></script>
 <% end %>
+<% end %> 
+<% else %> 
+    <%= form_tag event_subscription_path, :method => :post, :class => 'internal' do %>
+     <%= button_tag "Subscribe" %>
+    </form>
+    <% end %> 
 <% end %> 
 <p>
   <strong>Start date:</strong>

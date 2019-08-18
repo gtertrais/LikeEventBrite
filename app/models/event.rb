@@ -24,8 +24,8 @@ class Event < ApplicationRecord
   end
 
 
-  def is_free?
-    return self.price == 0
+  def is_payable?
+    return self.price > 0
   end
 
 end
