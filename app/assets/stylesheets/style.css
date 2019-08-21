@@ -1,4 +1,4 @@
-
+@import "font-awesome";
 
 /************************/
 /* 	    INDEX           */
@@ -75,7 +75,7 @@ footer { bottom: 0;}
 /************************/
 
 .banner {
-  background-image: url('../images/Banner.jpg');
+  background-image: url(/assets/Banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -86,14 +86,15 @@ footer { bottom: 0;}
   color : rgb(255,255,255); /* color of the letters */
   text-align: center;/* put the letters at the center of the banner */
   text-transform: uppercase;
-  font-size: 14vw;
-  padding-left: 20px;
+  font-size: 13vw;
+  padding-bottom: 50px;
+  padding-left: 0px;
   font-weight: bold;
   font-family: 'Anton', sans-serif;
    /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   margin-top: 8%;
-  letter-spacing: .30em; /* Adjust as needed */
+  letter-spacing: .05em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .0s step-end infinite;
@@ -196,14 +197,14 @@ footer { bottom: 0;}
 /************************/
 .show1{
     margin: 80px;
-    background-color: lightgray;
+    background-color: grey;
     
 }
 
 
-.row1{
+.row{
     
-    background-color: white;
+    
     
 }
 .top{
@@ -245,7 +246,7 @@ footer { bottom: 0;}
 
 .image
 {
-    background-image: url('../images/Banner.jpg');
+    
     background-size: cover;
     background-repeat: no-repeat;
 	
@@ -254,12 +255,12 @@ footer { bottom: 0;}
 .box{
     line-height: 57px;
     height: 50px;
-    margin-top: 68px;
+    margin-top: 0px;
     border-bottom: 1px solid lightgray;
 }
 .subscribe{
-    float: right;
-    margin-top: 6px;
+    float: left;
+    margin-top: 26px;
     margin-right: 50px;
     height: 40px;
     font-size: 18px;
@@ -280,7 +281,7 @@ footer { bottom: 0;}
 
 .link{
     padding-left: 10px;
-    color: grey;
+    color: white;
     
 }
 
