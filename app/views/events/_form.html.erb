@@ -1,5 +1,5 @@
-<%= form_with(model: event, local: true) do |form| %>
-  <% if event.errors.any? %>
+<%= form_for @event, url: {action: "create"}, html: {class: "form"} do |form| %>
+   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
@@ -11,45 +11,63 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :start_date %>
-    <%= form.datetime_select :start_date %>
-  </div>
+   <h1 class="form-h1">New Event</h1>
 
-  <div class="field">
-    <%= form.label :duration %>
-    <%= form.number_field :duration %>
-  </div>
+        <fieldset>
+          <div class="form-group">
+            <%= form.label :title %><br />
+            <%= form.text_field :title, class: 'form-control', placeholder: "Enter Title" %> 
+          </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+          <div class="form-group">
+            <%= form.label :location %><br />
+            <%= form.text_field :location, class: 'form-control', placeholder: "Enter Location" %>
+          </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>€
-  </div>
+          <div class="form-group">
+            <%= form.label :description %><br />
+            <%= form.text_area :description, class: 'form-control', placeholder: "Enter Description" %>
+            <small class="form-text text-muted">20 caracters minimum</small>
+          </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-  </div>
-  
+          
+          <div class="form-group">
+            <%= form.label :price %><br /> 
+            <div class="form-group">
+              <div class="input-group mb-3 form-group">
+              <%= form.number_field :price, in: 0..1000, step:1,  class: "form-control", placeholder: "If free, enter 0" %>
+              <div class="input-group-append">
+                <span class="input-group-text">€</span>
+            </div>
+          </div>
+          </div>
+          </div>
+          
+          <div class="form-group date2">
+           <%= form.label :start_date %><br />
+            <%= form.date_field :start_date,  class: "form-control", value:"2019-08-19T13:45:00" %>
+           </div>
 
-  <div class="field">
-    <%= form.label :photos %>
-    <%= form.file_field :photos %>
-  </div>
-  
- 
+          <div class="form-group names2">
+            <%= form.label :duration %><br />
+            <%= form.number_field :duration, in: 5..180, step: 5,  class: "form-control", placeholder: "Enter Duration in minutes" %>
+          </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+        </fieldset>
+          
+           <div class="form-group">
+            <%= form.label :photos, "Pictures" %><br />
+            <div class="custom-file">
+            <%=form.file_field :photos, class:"custom-file-input"%><br>
+            <label class="custom-file-label" for="inputGroupFile02">Pick photos for your event</label>
+          </div>
+          </div>
+                
+          <button type="submit" class="btn btn-primary" href='<%= form.submit %>'>Create</button>
+              
 <% end %>
+
+
+
+                  
