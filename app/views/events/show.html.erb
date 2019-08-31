@@ -1,80 +1,17 @@
+
 <p id="notice"><%= notice %></p>
 
+<body>
 
-<% unless @event.users .include? current_user %> 
-<%= form_tag event_subscription_path(@event)  do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: <%=@event.price%>€ </span>
-    </label>
-  </article>
-    <% end %> 
-     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="<%=@amount%>"
-          data-currency="eur"
-          data-locale="auto"></script>
-<% end %>
+<%= render 'shared/show', event: @event %>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @end_date %>
-</p>
 
-<p>
-  <strong>Duration:</strong>
-  <%= @event.duration %> min
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title.upcase %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @event.price %>€
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location.capitalize %>
-</p>
-
-<p>
-    <strong>Organizer name:</strong>
-    <%= organizer.first_name %>
-    <%= organizer.last_name %>
-</p>
-
-<p>
-    <strong>Organizer:</strong>
-    <%= organizer.email %>
-</p>
-
-<p>
-    <strong>Attendance:</strong>
-    <%= @event.users.count %>
-</p>
  <% if current_user == @event.user %> 
       <%= link_to 'Participant list', event_attendances_path(@event) %>  
       <%= link_to 'Edit', edit_event_path(@event) %> |
 <% end %> 
     <%= link_to 'Back', events_path(@event) %>
-   
+
+    </body>

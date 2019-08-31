@@ -1,39 +1,16 @@
 <p id="notice"><%= notice %></p>
  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3">EventBrite-Like</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p> <%= link_to 'New Event', new_event_path, :class => "btn btn-primary btn-lg" %></p>
-    </div>
-  </div>
+ <body>
+  <%= render 'shared/banner' %>
 
-<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around; ">
-    <!-- Example row of columns -->
+<div class="container">
     <div class="row">
 
      <% @events.each do |event| %>
-      <div class="col-md-4">
-        <h2><%= event.title %></h2>
-        <h3><%= event.location %></h3>
-        <h3><%= event.price %>€</h3>
-         <p><%= link_to 'Show', event, :class => "btn btn-secondary" %>
-          <% if  current_user && current_user.id == event.user_id %> 
-             <%= link_to 'Edit', edit_event_path(event), :class => "btn" %>
-            <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn" %></p>
-        <% end %>
-       
-      </div>
-      <% end %>
+      <%= render 'shared/card', event: event %>
+     <% end %>
     </div>
+</div>
 
-    <hr>
 
-  </div> <!-- /container -->
-
-</main>
-
-<footer class="container">
-  <p>&copy; Created by Gaspard Tertrais </p>
-</footer>
-</html>
+</body>

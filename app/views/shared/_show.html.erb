@@ -1,0 +1,91 @@
+
+    <div class="show1">
+    <div class="container-fluid show2">
+        <div class="row top">
+            <div class="col-md-8 image">
+                <img style="border-radius: 7px 7px 0px 0px; height: auto; width: 100%; display: block;" src="<%=url_for(@event.photos) if @event.photos.attached? %>" alt="Card image"></img>
+            </div>
+            <div class="col-md-4 right">
+                <h1 class="date"><%= @event.start_date %></h1> <br><br><br>
+                <h1 class="title"><%=@event.title.capitalize%></h1><br>
+                <h6>Guests: <%= @event.users.count %></h6>
+                <small class="text-muted author">By <%= organizer.first_name.capitalize %> <%= organizer.last_name.capitalize %></small>
+                <div class="price">
+                <small class="text-muted"><%=@event.price%>€</small>
+                <% if @event.is_payable? %>
+<% unless current_user == @event.user || !current_user %> 
+<%= form_tag event_subscription_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+    </label>
+  </article>
+  <br>
+     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="<%=@amount%>"
+          data-currency="eur"
+          data-locale="auto"></script>
+<% end %>
+<% end %> 
+<% else %> 
+    <%= form_tag event_subscription_path, :method => :post, :class => 'internal' do %>
+      <button type="submit" class="btn btn-primary lg subscribe col-md-3">Subscribe</button>
+    </form>
+    <% end %> 
+<% end %> 
+            </div>
+            </div>
+        </div>
+        <div class="row" >
+        
+            </div>
+            
+        <div class="row top">
+            <div class="col-md-8 text">
+                <h2>Description</h2>
+                <p><%= @event.description %></p>
+            
+
+                <div>
+            
+                <button type="button" class="btn btn-fb icon2"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
+                <!--Twitter-->
+                <button type="button" class="btn btn-tw icon2"><i class="fab fa-twitter pr-1"></i> Twitter</button>
+                <!--Google +-->
+                <button type="button" class="btn btn-gplus icon2"><i class="fab fa-google-plus-g pr-1"></i> Google +</button>
+                <!--Linkedin-->
+                <button type="button" class="btn btn-li icon2"><i class="fab fa-linkedin-in pr-1"></i> Linkedin</button>
+                <!--Instagram-->
+                <button type="button" class="btn btn-ins icon2"><i class="fab fa-instagram pr-1"></i> Instagram</button>
+                <!--Pinterest-->
+
+            </div>
+            </div>
+            <div class="col-md-4 bottom">
+                <div>
+                    <h4>Date and time</h4>
+                    <p>Start on:<%= @event.start_date %><br> </p>
+                    <p>Finish on:<%= @end_date  %><br> </p>
+                    <p>Duration:<%= @event.duration %> min<br> <a href="#">Add to agenda</a> </p>
+                </div>
+                <br>
+                <div>
+                    <h4>Location</h4>
+                    <p><%= @event.location.capitalize %> <a href="#">Show on map</a></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+
+
+   

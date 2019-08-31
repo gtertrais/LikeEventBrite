@@ -1,0 +1,328 @@
+
+/************************/
+/* 	    INDEX           */
+/************************/
+#jumbotronindex {
+    text-align: center;
+}
+
+h1, h2, h3, h4{
+    font-family: Montserrat;
+}
+
+  body {
+	width: 100%;
+	margin: 0;
+    display: flex;
+    flex-direction: column;
+	min-height: 100vh; /*always have atleast the height of viewport*/
+	font-family: verdana, serif;
+}
+
+footer {
+    
+	background:#E9ECEF;
+/* margin-top: auto;/* /*another magical line*/ 
+}
+
+
+
+
+/************************/
+/*      small_banner    */
+/************************/
+
+.small-banner{
+    background-image: url('../images/Banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+}
+
+footer { bottom: 0;}
+
+
+/************************/
+/*    Cards             */
+/************************/
+
+
+
+.container-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Card Event */
+.card-img-overlay .card-text{
+    position: relative;
+    top: 38%;
+    bottom: 0;
+    text-align: right;
+}
+
+/* Card Attendee */
+.card a{
+    display: block;
+}
+
+/************************/
+/*    BANNER            */
+/************************/
+
+.banner {
+  background-image: url(/assets/Banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .0em solid rgb(255, 255, 255); /* The typwriter cursor */
+  color : rgb(255,255,255); /* color of the letters */
+  text-align: center;/* put the letters at the center of the banner */
+  text-transform: uppercase;
+  font-size: 13vw;
+  padding-bottom: 50px;
+  padding-left: 0px;
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+   /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  margin-top: 8%;
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .0s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0% }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+
+/************************/
+/* 	    FORM            */
+/************************/
+
+
+.form{
+    width: 35rem;
+    margin-left: 25rem;
+    margin-top: 20px;
+    padding: 20px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    background-color: #E9ECEF;
+    border-radius: 5px;
+    -webkit-box-shadow: 9px 11px 18px -9px rgba(0,0,0,0.67);
+    -moz-box-shadow: 9px 11px 18px -9px rgba(0,0,0,0.67);
+    box-shadow: 9px 11px 18px -9px rgba(0,0,0,0.67);
+}
+
+.form-h1{
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.names{
+
+    width: 15rem;
+    float: left;
+
+}
+.names2{
+
+    width: 15rem;
+    float: right;
+
+}
+
+.last-name{
+    margin-left: 38px;
+}
+
+#emailHelp{
+    padding-left: 15px;
+}
+
+.check{
+    padding-top: 20px;
+}
+
+.switch{
+    margin-top: 2rem;
+    margin-left: 26rem;
+}
+
+.small-text{
+    font-size: 10pt;
+
+}
+
+.center{
+    margin-top: 25px;
+
+}
+
+.time{
+    margin-left: 23px;
+
+}
+
+.date2{
+
+    width: 16rem;
+    float: left;
+
+}
+
+
+
+/************************/
+/* 	    SHOW            */
+/************************/
+.show1{
+    margin: 80px;
+    background-color: grey;
+    
+}
+
+
+.row{
+    
+    
+    
+}
+.top{
+    height: 30rem;
+    font-size: 18px;
+    
+   
+}
+
+.right{
+    padding-left: 42px;
+    padding-top: 42px;
+    padding-right: 42px;
+    background-color: #F6F7F8;
+}
+
+.date{
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+.title{
+   
+   color: #024586;
+   font-size: 35px;
+}
+
+.author{
+    font-size: 15px;
+}
+
+.price{
+    padding-top:80px;
+    font-size: 20px;
+}
+
+
+
+.image
+{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+	
+}
+
+.box{
+    line-height: 57px;
+    height: 50px;
+    margin-top: 0px;
+    border-bottom: 1px solid lightgray;
+}
+.subscribe{
+    float: left;
+    margin-top: 26px;
+    margin-right: 50px;
+    height: 40px;
+    font-size: 18px;
+    
+}
+
+.icon{
+    
+    font-size: 25px;
+}
+
+.icon2{
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+
+
+.link{
+    padding-left: 10px;
+    color: white;
+    
+}
+
+.like{
+    padding-left: 10px;
+    color: grey;
+}
+
+
+.text{
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+
+.bottom{
+    font-size: 14px;
+    padding-left: 42px;
+    padding-top: 40px;
+}
+/************************/
+/* 	    PRESENTATION    */
+/************************/
+.presentation{
+    margin: 150px;
+}
+
+/************************/
+/* 	    COMMENT         */
+/************************/
+.button2{
+    margin-left: 85px;
+    margin-top: 15px;
+}
+
+/************************/
+/* 	    FORM            */
+/************************/
+
+
+/************************/
+/* 	    FORM            */
+/************************/
+
+

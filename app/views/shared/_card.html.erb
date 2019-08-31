@@ -1,0 +1,20 @@
+
+<div class="col">
+    <a href= "<%= "events/#{event.id}"%>" style="text-decoration: none"><div class="card mb-3">
+    <img style="border-radius: 7px 7px 0px 0px; height: 200px; width: 100%; display: block;" src="<%=url_for(event.photos) if event.photos.attached? %>" alt="Card image"></img>
+      <div class="card-body">
+        <h4 class="card-title"><%= event.title.capitalize %></h4>
+        <h5 class="card-title"><%= event.location.capitalize %></h5>
+        <h6 class="card-subtitle text-muted"><%= event.user.first_name.capitalize %> <%= event.user.last_name.capitalize %></h6><br>
+        <span class="badge badge-pill badge-primary"><%= event.users.count%> guests</span>
+        <span class="badge badge-pill badge-secondary"><%= event.price %>€</span>
+      </div>
+      <div class="card-footer text-muted">
+        <%= event.start_date %>
+      </div>
+    </div></a>
+  </div>
+
+
+
+  

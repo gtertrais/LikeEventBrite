@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
   include EventsHelper
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy, :subscribe]
   before_action :is_admin?, only: [:edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
+
 
   # GET /events
   # GET /events.json
@@ -16,9 +18,8 @@ class EventsController < ApplicationController
   end
 
 def subscribe
-
   @event = Event.find(params[:id])
-  if @event.users .include? current_user
+  if @event.users.include? current_user 
     flash[:error] = 'You already subscribed to this event'
     redirect_to @event
     return
@@ -26,7 +27,7 @@ def subscribe
 
   @amount = (@event.price)*100
 
-  if !@event.is_free?
+  if @event.is_payable?
   customer = Stripe::Customer.create({
     email: params[:stripeEmail],
     source: params[:stripeToken],
@@ -39,22 +40,22 @@ def subscribe
     currency: 'eur',
   })
   stripe_customer_id = charge.customer
+  @event.users << current_user
+  flash[:success] = 'Subscribtion successful'
+    redirect_to @event
+    return
 else
   stripe_customer_id = ""
+  @event.users << current_user
+  flash[:success] = 'Subscribtion successful'
+  redirect_to @event
+  return
 end
-
-@event.users << current_user
-  flash[:success] = 'Subscribtion successfull'
-    redirect_to @event
-
-    
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to @event
-
-  
-
+  return
 end
 
 
@@ -110,17 +111,20 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
+    
     def set_event
       @event = Event.find(params[:id])
     end
 
       def is_admin?
+        @event = Event.find(params[:id])
         redirect_to root_path unless current_user == @event.user
     end
   
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:start_date, :duration, :title, :description, :price, :location)
+      params.require(:event).permit(:start_date, :photos, :duration, :title, :description, :price, :location)
     end
 end
