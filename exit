@@ -1,0 +1,294 @@
+[33mcommit 8feb40de0c564b66f63e32e283fd07bfc283317d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Sep 1 11:40:40 2019 +0200
+
+    secretkey
+
+[33mcommit 9a495f0c0f16153097a1887f9328796a71b5ab5d[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Sep 1 11:33:00 2019 +0200
+
+    e
+
+[33mcommit cb1aede914eea2094785fb0669fb8c0f0acaf846[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Sep 1 11:27:27 2019 +0200
+
+    gem2
+
+[33mcommit 1d9252b3c728a023dcc9b25dfb049b6357fdcb41[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Sep 1 11:22:57 2019 +0200
+
+    gem
+
+[33mcommit 0e4741cd27ab59b934e3a9d2b8eddb46818f9eaa[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Sep 1 11:15:03 2019 +0200
+
+    test3
+
+[33mcommit 8f5bec96c5c5dbcc4104b8a289f43aa965a0d18d[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Sep 1 11:09:45 2019 +0200
+
+    test2
+
+[33mcommit d119f90006a442bafd382bf8e3e921cd9402ef6b[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Sep 1 11:09:06 2019 +0200
+
+    test
+
+[33mcommit 6d4a09526b7b009b16d9aea60f93fc92f5dddb74[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sat Aug 31 16:42:19 2019 +0200
+
+    heroky
+
+[33mcommit 33968acac6b717614aad9baa39fa0c815e520cfa[m
+Merge: f9949c4 4540edc
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sat Aug 31 16:30:15 2019 +0200
+
+    merge2
+
+[33mcommit f9949c4721bf2c09d04ec785952cdddffb627e8f[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sat Aug 31 16:25:59 2019 +0200
+
+    merge
+
+[33mcommit 4540edcfa658e90cef80feeef0f78c87991c383f[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Thu Aug 22 10:03:25 2019 +0200
+
+    fix3
+
+[33mcommit 097165d8d1914be81ed9a4767ead3064a94b08cb[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Thu Aug 22 10:01:19 2019 +0200
+
+    fix2
+
+[33mcommit e9fbddaa5a207e27028dcb084e29953dbd652516[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Thu Aug 22 09:56:55 2019 +0200
+
+    fix
+
+[33mcommit 4e42e99b03c480548318813b97c04b2dbd04afb1[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Wed Aug 21 19:04:20 2019 +0200
+
+    add bootstrap index show
+
+[33mcommit 6e6e84c9b5f6373b2fdd2ab812e033208f636b54[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Wed Aug 21 15:36:02 2019 +0200
+
+    formbootstrap
+
+[33mcommit b869612dfa474f18b2b365c9dc81b7bc371f2f34[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Aug 18 17:00:39 2019 +0200
+
+    add pic to events
+
+[33mcommit 5f925aa8b556c75f995f423261e000dfa2a8f4ea[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Aug 18 15:25:42 2019 +0200
+
+    avatar
+
+[33mcommit 9e1f85aef725083333c6346559a03449c34f8233[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Aug 18 14:40:26 2019 +0200
+
+    subscribeButton
+
+[33mcommit 07c932cc1ba4e799c4675e0aa98f5d2e2894b865[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Aug 18 12:16:07 2019 +0200
+
+    fixSignup
+
+[33mcommit 964bc22bf270041c64453efdada3ed38daf1ba74[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sun Aug 18 12:11:55 2019 +0200
+
+    stripeFinish
+
+[33mcommit 1d0f2aebaab740c0b392b60510768b7f904f6dfc[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sat Aug 17 15:13:31 2019 +0200
+
+    test
+
+[33mcommit 800519fab1e93e546b8ba25b45f1df986066197f[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sat Aug 17 15:10:13 2019 +0200
+
+    1
+
+[33mcommit 7d5d4d70e7ff88f15b832279c8d49b33e21ad842[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Sat Aug 17 10:27:27 2019 +0200
+
+    register enhance
+
+[33mcommit 0ae8df1051a1956b685f4a6e99c6aefd6c09ca81[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Thu Aug 15 17:35:46 2019 +0200
+
+    finish index participants
+
+[33mcommit 081f9b05e4de823ad542d501a2c1b8c0ac58e6d3[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Thu Aug 15 13:10:49 2019 +0200
+
+    stripe checkout
+
+[33mcommit 00b313408f82e0fe2c51241f6a692e33847bd3c8[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Tue Aug 13 20:09:04 2019 +0200
+
+    add link heroku readme
+
+[33mcommit 8c61c9431deb9dfa14c98694a1b20ffa70df729c[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Tue Aug 13 19:48:15 2019 +0200
+
+    finish
+
+[33mcommit d90570693d27bb081367512b2507915e4f332225[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 18:52:36 2019 +0200
+
+    probleme regler
+
+[33mcommit 132da1931d8f9df8432ad1c9347fcc0c46047a47[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 17:15:09 2019 +0200
+
+    test
+
+[33mcommit fd99c91adb58028a169615c7909def1117c972c8[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 17:11:21 2019 +0200
+
+    seeddddd
+
+[33mcommit dc1f0c2db000eb03c64e0c82db040e59f81ea733[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 16:42:43 2019 +0200
+
+    seed
+
+[33mcommit 1f185aae228da9fef4c2ac1e0b011a8e1dffbb2f[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 16:32:42 2019 +0200
+
+    ajout du readme
+
+[33mcommit e60b5d94309e2cab25aef3186c7ba25bc4d9d69d[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 16:24:47 2019 +0200
+
+    salut gaspard
+
+[33mcommit 1514587056686a43046f77223be9cd2e94d3f694[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 15:33:20 2019 +0200
+
+    done
+
+[33mcommit 7b07eae25de379120c51ad28324af15b1a6220d7[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 14:46:56 2019 +0200
+
+    merde2
+
+[33mcommit 6921146fcc80a47c368f01cdd81b916268fa6c4b[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 14:44:26 2019 +0200
+
+    merde
+
+[33mcommit eda32948aad476cfe790e853e6c36fb73bed138a[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 12:47:58 2019 +0200
+
+    welcome2
+
+[33mcommit 66a42409709627dafb41abcb93bd0ba1a1660b24[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 12:44:05 2019 +0200
+
+    welcome
+
+[33mcommit 006f8c9c04d34b326b6e127ced3e841a3e2d9dc6[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 12:39:40 2019 +0200
+
+    putain
+
+[33mcommit 2c8f2d2c64212117fb829816f5458258f90fe9b9[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 12:38:49 2019 +0200
+
+    return
+
+[33mcommit ef4ae310a158ed46a1fa91b35ed9f6d72885f647[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 12:36:01 2019 +0200
+
+    confirmable
+
+[33mcommit b9de72c396d7ee403816c0f14530149cb9b6e163[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 12:19:47 2019 +0200
+
+    production change
+
+[33mcommit 4b133d77ccdcbf50de39c5b1def3092c7a70997a[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 12:05:31 2019 +0200
+
+    before push on heroku
+
+[33mcommit 22c144d676a9515a00440dae816948a7beee22bd[m
+Author: adrien66 <adrien66.pub@gmail.com>
+Date:   Tue Aug 13 11:22:55 2019 +0200
+
+    first commit
+
+[33mcommit e27f9286202c5b494657745b6fd2a85041657781[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Tue Aug 13 09:25:24 2019 +0200
+
+    change sendgrid key
+
+[33mcommit af8c4ce648366a5715b791b225134472e358f623[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Mon Aug 12 18:03:18 2019 +0200
+
+    email event
+
+[33mcommit f4f03f0082bff1c32a5e9ce46ebb09cb927ec05b[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Mon Aug 12 14:52:14 2019 +0200
+
+    email send
+
+[33mcommit f187778d875ed2a97d5b8c596f0dd19c696cc7f6[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Mon Aug 12 14:38:51 2019 +0200
+
+    backend
+
+[33mcommit 5f126b11487f7b224fb21597c3d48edf501d70a4[m
+Author: Gaspard49 <gaspard.tertrais@gmail.com>
+Date:   Mon Aug 12 14:25:24 2019 +0200
+
+    seed
